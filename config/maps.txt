@@ -18,7 +18,8 @@ endmap
 map birdshot
 	#default
 	maxplayers 66
-	#votable
+	votable
+	disabled
 endmap
 
 map deltastation
