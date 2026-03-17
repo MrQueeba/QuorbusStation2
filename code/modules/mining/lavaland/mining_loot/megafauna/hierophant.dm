@@ -75,7 +75,7 @@
 
 /obj/item/hierophant_club/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	// If our target is the beacon and the hierostaff is next to the beacon, we're trying to pick it up.
-	if (interacting_with == beacon)
+	if (interacting_with == beacon || !isturf(interacting_with.loc))
 		return NONE
 
 	if (!blink_activated)
@@ -124,7 +124,7 @@
 	var/turf/user_turf = get_turf(user)
 	teleporting = TRUE
 	user.update_mob_action_buttons()
-	user.visible_message(span_hierophant_warning("[user] starts to glow faintly..."), span_hierophant_warning("You begin channeling [src]'s power..i."))
+	user.visible_message(span_hierophant_warning("[user] starts to glow faintly..."), span_hierophant_warning("You begin channeling [src]'s power..."))
 	beacon.icon_state = "hierophant_tele_on"
 	var/obj/effect/temp_visual/hierophant/telegraph/edge/user_telegraph = new /obj/effect/temp_visual/hierophant/telegraph/edge(user_turf)
 	var/obj/effect/temp_visual/hierophant/telegraph/edge/beacon_telegraph = new /obj/effect/temp_visual/hierophant/telegraph/edge(beacon_turf)
@@ -241,11 +241,6 @@
 	var/dist = get_dist(user, target)
 	if(dist > HIEROPHANT_BLINK_RANGE)
 		user.balloon_alert(user, "destination out of range!")
-		return FALSE
-
-	var/turf/target_turf = get_turf(target)
-	if(target_turf.is_blocked_turf_ignore_climbable())
-		user.balloon_alert(user, "destination blocked!")
 		return FALSE
 
 	. = ..()

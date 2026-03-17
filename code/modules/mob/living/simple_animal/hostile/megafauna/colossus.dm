@@ -51,8 +51,9 @@
 	achievement_type = /datum/award/achievement/boss/colossus_kill
 	crusher_achievement_type = /datum/award/achievement/boss/colossus_crusher
 	score_achievement_type = /datum/award/score/colussus_score
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 	loot = list(/obj/structure/closet/crate/necropolis/colossus)
+	crusher_loot = /obj/structure/closet/crate/necropolis/colossus/crusher
+	replace_crusher_drop = TRUE
 	death_message = "disintegrates, leaving a glowing core in its wake."
 	death_sound = 'sound/effects/magic/demon_dies.ogg'
 	summon_line = "Your trial begins now."
@@ -92,6 +93,7 @@
 	random_shots = null
 	shotgun_blast = null
 	dir_shots = null
+	colossus_final = null
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/colossus/OpenFire()
@@ -156,7 +158,7 @@
 	if(isgolem(victim) && victim.has_status_effect(/datum/status_effect/golem/gold))
 		return TRUE
 
-	return istype(victim.mind?.martial_art, /datum/martial_art/the_sleeping_carp)
+	return istype(GET_ACTIVE_MARTIAL_ART(victim), /datum/martial_art/the_sleeping_carp)
 
 /obj/effect/temp_visual/at_shield
 	name = "anti-toolbox field"

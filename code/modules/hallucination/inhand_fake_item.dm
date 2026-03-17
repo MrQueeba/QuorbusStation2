@@ -2,6 +2,7 @@
 /datum/hallucination/fake_item
 	abstract_hallucination_parent = /datum/hallucination/fake_item
 	random_hallucination_weight = 1
+	hallucination_tier = HALLUCINATION_TIER_COMMON
 
 	/// A flag of slots this fake item can appear in.
 	var/valid_slots = ITEM_SLOT_HANDS|ITEM_SLOT_BELT|ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET
@@ -9,6 +10,9 @@
 	var/obj/item/template_item_type
 
 /datum/hallucination/fake_item/start()
+	if(hallucinator.stat >= UNCONSCIOUS)
+		return FALSE
+
 	var/list/slots_free = list()
 	if(valid_slots & ITEM_SLOT_HANDS)
 		for(var/hand in hallucinator.get_empty_held_indexes())
@@ -113,6 +117,24 @@
 		to_chat(hallucinator, span_warning("You prime [hallucinated_item]! 5 seconds!"))
 
 	return hallucinated_item
+
+/datum/hallucination/fake_item/summon_guns
+	hallucination_tier = HALLUCINATION_TIER_RARE
+	valid_slots = ITEM_SLOT_HANDS
+
+/datum/hallucination/fake_item/summon_guns/make_fake_item(where_to_put_it, equip_flags)
+	template_item_type = pick(GLOB.summoned_guns)
+	. = ..()
+	hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/magic/summon_guns.ogg', 50, TRUE)
+
+/datum/hallucination/fake_item/summon_magic
+	hallucination_tier = HALLUCINATION_TIER_RARE
+	valid_slots = ITEM_SLOT_HANDS
+
+/datum/hallucination/fake_item/summon_magic/make_fake_item(where_to_put_it, equip_flags)
+	template_item_type = pick(GLOB.summoned_magic + GLOB.summoned_special_magic)
+	. = ..()
+	hallucinator.playsound_local(get_turf(hallucinator), 'sound/effects/magic/summon_magic.ogg', 50, TRUE)
 
 /obj/item/hallucinated
 	name = "mirage"

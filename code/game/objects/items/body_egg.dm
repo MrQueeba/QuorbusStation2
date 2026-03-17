@@ -11,6 +11,10 @@
 	..()
 	to_chat(finder, span_warning("You found an unknown alien organism in [owner]'s [zone]!"))
 
+/obj/item/organ/body_egg/feel_for_damage(self_aware)
+	// keep these stealthy for now, revisit later
+	return ""
+
 /obj/item/organ/body_egg/Initialize(mapload)
 	. = ..()
 	if(iscarbon(loc))
@@ -29,17 +33,17 @@
 	egg_owner.med_hud_set_status()
 	INVOKE_ASYNC(src, PROC_REF(RemoveInfectionImages), egg_owner)
 
-/obj/item/organ/body_egg/on_death(seconds_per_tick, times_fired)
+/obj/item/organ/body_egg/on_death(seconds_per_tick)
 	. = ..()
 	if(!owner)
 		return
-	egg_process(seconds_per_tick, times_fired)
+	egg_process(seconds_per_tick)
 
-/obj/item/organ/body_egg/on_life(seconds_per_tick, times_fired)
+/obj/item/organ/body_egg/on_life(seconds_per_tick)
 	. = ..()
-	egg_process(seconds_per_tick, times_fired)
+	egg_process(seconds_per_tick)
 
-/obj/item/organ/body_egg/proc/egg_process(seconds_per_tick, times_fired)
+/obj/item/organ/body_egg/proc/egg_process(seconds_per_tick)
 	return
 
 /obj/item/organ/body_egg/proc/RefreshInfectionImage()

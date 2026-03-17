@@ -10,7 +10,7 @@
 
 		var/datum/universal_icon/head_accessory_icon = uni_icon(sprite_accessory.icon, sprite_accessory.icon_state)
 		if(y_offset)
-			head_accessory_icon.shift(NORTH, y_offset, ICON_SIZE_X, ICON_SIZE_Y)
+			head_accessory_icon.shift(NORTH, y_offset)
 		head_accessory_icon.blend_color(COLOR_DARK_BROWN, ICON_MULTIPLY)
 		final_icon.blend_icon(head_accessory_icon, ICON_OVERLAY)
 
@@ -143,6 +143,9 @@
 	category = PREFERENCE_CATEGORY_SUPPLEMENTAL_FEATURES
 	relevant_head_flag = HEAD_HAIR
 
+/datum/preference/color/hair_color/has_relevant_feature(datum/preferences/preferences)
+	return ..() || (/datum/quirk/item_quirk/bald::name in preferences.all_quirks)
+
 /datum/preference/color/hair_color/apply_to_human(mob/living/carbon/human/target, value)
 	target.set_haircolor(value, update = FALSE)
 
@@ -157,6 +160,9 @@
 	main_feature_name = "Hairstyle"
 	should_generate_icons = TRUE
 	relevant_head_flag = HEAD_HAIR
+
+/datum/preference/choiced/hairstyle/has_relevant_feature(datum/preferences/preferences)
+	return ..() || (/datum/quirk/item_quirk/bald::name in preferences.all_quirks)
 
 /datum/preference/choiced/hairstyle/init_possible_values()
 	return assoc_to_keys_features(SSaccessories.hairstyles_list)
