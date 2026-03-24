@@ -663,6 +663,14 @@
 #define AI_EMOTION_RED_GLOW "Red Glow"
 #define AI_EMOTION_DEAD "Dead" //This one is used when deactivating the AI
 #define AI_EMOTION_DOWNLOAD "Download"
+#define AI_EMOTION_SUPER "Superintendent" //Please Walk
+#define AI_EMOTION_SUPER_BORED "Superintendent Bored"
+#define AI_EMOTION_SUPER_SAD "Superintendent Sad"
+#define AI_EMOTION_SUPER_CONFUSED "Superintendent Confused"
+#define AI_EMOTION_SUPER_HAPPY "Superintendent Happy"
+#define AI_EMOTION_SUPER_ANGRY "Superintendent Angry"
+#define AI_EMOTION_SUPER_SLEEPING "Superintendent Sleeping"
+#define AI_EMOTION_SUPER_KEEPITCLEAN "Keep It Clean"
 
 // Defines for AI holograms
 #define AI_HOLOGRAM_CATEGORY_ANIMAL "Animal"

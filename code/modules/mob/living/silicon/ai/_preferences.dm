@@ -18,6 +18,14 @@ GLOBAL_LIST_INIT(ai_status_display_emotes, list(
 	AI_EMOTION_VERY_HAPPY = "ai_veryhappy",
 	AI_EMOTION_DEAD = "ai_dead",
 	AI_EMOTION_DOWNLOAD = "ai_download",
+	AI_EMOTION_SUPER = "ai_super",
+	AI_EMOTION_SUPER_BORED = "ai_super_bored",
+	AI_EMOTION_SUPER_SAD = "ai_super_sad",
+	AI_EMOTION_SUPER_CONFUSED = "ai_super_confused",
+	AI_EMOTION_SUPER_HAPPY = "ai_super_happy",
+	AI_EMOTION_SUPER_ANGRY = "ai_super_angry",
+	AI_EMOTION_SUPER_SLEEPING = "ai_super_sleeping",
+	AI_EMOTION_SUPER_KEEPITCLEAN = "ai_super_keepitclean",
 ))
 
 // Mapping from AI core display options to new status display icon states
@@ -57,6 +65,7 @@ GLOBAL_LIST_INIT(ai_core_to_status_display_mapping, list(
 	"Too Deep" = "ai_status_too_deep",
 	"Triumvirate" = "ai_status_triumvirate",
 	"Weird" = "ai_status_weird",
+	"Superintendent" = "ai_super",
 ))
 
 // Combined list for AI status display preferences, including both emotion states and AI core display options
@@ -188,6 +197,7 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Triumvirate-M",
 	"Triumvirate",
 	"Weird",
+	"Superintendent",
 )))
 
 /// A form of resolve_ai_icon that is guaranteed to never sleep.

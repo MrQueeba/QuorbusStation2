@@ -73,6 +73,39 @@
 	key = "friendcomputer"
 	emotion = AI_EMOTION_FRIEND_COMPUTER
 
+/datum/emote/ai/emotion_display/super
+	key = "super"
+	emotion = AI_EMOTION_SUPER
+
+/datum/emote/ai/emotion_display/super_bored
+	key = "super_bored"
+	emotion = AI_EMOTION_SUPER_BORED
+
+/datum/emote/ai/emotion_display/super_sad
+	key = "super_sad"
+	emotion = AI_EMOTION_SUPER_SAD
+
+/datum/emote/ai/emotion_display/super_confused
+	key = "super_confused"
+	emotion = AI_EMOTION_SUPER_CONFUSED
+
+/datum/emote/ai/emotion_display/super_happy
+	key = "super_happy"
+	emotion = AI_EMOTION_SUPER_HAPPY
+
+/datum/emote/ai/emotion_display/super_angry
+	key = "super_angry"
+	emotion = AI_EMOTION_SUPER_ANGRY
+
+/datum/emote/ai/emotion_display/super_sleeping
+	key = "super_sleeping"
+	emotion = AI_EMOTION_SUPER_SLEEPING
+
+/datum/emote/ai/emotion_display/super_keepitclean
+	key = "super_keepitclean"
+	emotion = AI_EMOTION_SUPER_KEEPITCLEAN
+
+
 /datum/emote/ai/emotion_display/friend_computer/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	var/datum/radio_frequency/frequency = SSradio.return_frequency(FREQ_STATUS_DISPLAYS)
