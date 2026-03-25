@@ -6868,4 +6868,5 @@
 // QUORBUSSTATION INCLUDES
 #include "quorbusstation_data\code\modules\projectiles\guns\ballistic\qs_shotgun.dm"
 #include "quorbusstation_data\code\game\area\areas\station\qs_maintenance.dm"
+#include "quorbusstation_data\code\game\sound\sound_keys\qs_sound_keys.dm"
 // END QUORBUSSTATION INCLUDES
