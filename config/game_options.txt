@@ -164,11 +164,11 @@ ALLOW_RANDOM_EVENTS
 
 ## The lower bound, in deciseconds, for how soon another random event can be scheduled.
 ## Defaults to 1500 deciseconds or 2.5 minutes
-EVENTS_FREQUENCY_LOWER 1500
+EVENTS_FREQUENCY_LOWER 3000
 
 ## The upper bound, in deciseconds, for how soon another random event can be scheduled.
 ## Defaults to 4200 deciseconds or 7 minutes
-EVENTS_FREQUENCY_UPPER 4200
+EVENTS_FREQUENCY_UPPER 8400
 
 ## AI ###
 
@@ -478,7 +478,7 @@ ARRIVALS_SHUTTLE_DOCK_WINDOW 55
 
 ## How many wirechewing rodents you want to spawn on exposed maintenance wires at the start of the round. You may wish to set this to 0 if you're testing powernets.
 
-MICE_ROUNDSTART 10
+MICE_ROUNDSTART 6
 
 ## If the percentage of players alive (doesn't count conversions) drops below this threshold the emergency shuttle will be forcefully called (provided it can be)
 #EMERGENCY_SHUTTLE_AUTOCALL_THRESHOLD 0.2
