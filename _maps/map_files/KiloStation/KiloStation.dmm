@@ -2906,7 +2906,7 @@
 /obj/structure/table,
 /obj/machinery/light/small/directional/west,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "aUW" = (
@@ -12202,14 +12202,14 @@
 	pixel_x = -4;
 	pixel_y = 3
 	},
-/obj/item/stack/medical/gauze{
-	pixel_x = 8
-	},
 /obj/item/reagent_containers/chem_pack{
 	pixel_x = 10;
 	pixel_y = 10
 	},
 /obj/structure/sign/poster/random/directional/south,
+/obj/item/stack/medical/wrap/gauze{
+	pixel_x = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/exam_room)
 "eeb" = (
@@ -27574,6 +27574,11 @@
 /obj/machinery/light_switch/directional/west,
 /obj/effect/decal/cleanable/rubble,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/directional/west{
+	c_tag = "Mining";
+	name = "cargo camera";
+	network = list("ss13","qm")
+	},
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningoffice)
 "iRt" = (
@@ -37896,12 +37901,12 @@
 /area/station/cargo/office)
 "mlz" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/lobby)
 "mlB" = (
@@ -56748,13 +56753,14 @@
 /area/station/command/heads_quarters/cmo)
 "sCa" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/public/glass{
-	name = "Medbay"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	dir = 8;
+	name = "Medbay"
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central/fore)
@@ -61286,9 +61292,6 @@
 /area/station/command/heads_quarters/cmo)
 "tWe" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/public/glass{
-	name = "Medbay"
-	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central/fore)
 "tWg" = (
@@ -64336,10 +64339,10 @@
 /area/space/nearstation)
 "uWS" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze,
 /obj/item/stack/medical/bruise_pack,
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/small/directional/north,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "uWU" = (
