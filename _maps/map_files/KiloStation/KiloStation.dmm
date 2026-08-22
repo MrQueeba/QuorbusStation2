@@ -58748,13 +58748,14 @@
 /area/station/command/heads_quarters/cmo)
 "sCa" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/public/glass{
-	name = "Medbay"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	dir = 8;
+	name = "Medbay"
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central/fore)
@@ -63316,9 +63317,6 @@
 /area/station/command/heads_quarters/cmo)
 "tWe" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/public/glass{
-	name = "Medbay"
-	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central/fore)
 "tWf" = (
