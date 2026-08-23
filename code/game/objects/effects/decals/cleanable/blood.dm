@@ -824,7 +824,7 @@
 
 /obj/effect/decal/cleanable/blood/hitsplatter/proc/expire()
 	if(isturf(loc) && !skip)
-		playsound(src, 'sound/effects/wounds/splatter.ogg', 60, TRUE, -1)
+		playsound(src, SFX_QSV_EFFECTS_BLOODSPATTER, 100, TRUE, -1)
 		loc.add_blood_DNA(GET_ATOM_BLOOD_DNA(src))
 	qdel(src)
 

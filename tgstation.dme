@@ -17,6 +17,8 @@
 #define DEBUG
 // END_PREFERENCES
 
+// QUICK QS2 INCLUDE HAHA GRINS
+#include "quorbusstation_data\code\_DEFINES\sound.dm"
 // BEGIN_INCLUDE
 #include "__odlint.dm"
 #include "_maps\_basemap.dm"
@@ -7188,4 +7190,7 @@
 #include "quorbusstation_data\code\modules\projectiles\guns\ballistic\qs_shotgun.dm"
 #include "quorbusstation_data\code\game\area\areas\station\qs_maintenance.dm"
 #include "quorbusstation_data\code\game\sound\sound_keys\qs_sound_keys.dm"
+#include "quorbusstation_data\code\datums\wounds\slash.dm"
+#include "quorbusstation_data\code\datums\wounds\pierce.dm"
+#include "quorbusstation_data\code\datums\wounds\bones.dm"
 // END QUORBUSSTATION INCLUDES
