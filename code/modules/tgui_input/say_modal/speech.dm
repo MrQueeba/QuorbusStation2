@@ -53,6 +53,9 @@
 		if(PRAY_CHANNEL)
 			client.mob.pray(entry)
 			return TRUE
+		if(LOOC_CHANNEL)
+			client.looc(entry)
+			return TRUE
 	return FALSE
 
 /**

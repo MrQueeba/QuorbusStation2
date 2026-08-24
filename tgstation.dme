@@ -19,6 +19,8 @@
 
 // QUICK QS2 INCLUDE HAHA GRINS
 #include "quorbusstation_data\code\_DEFINES\sound.dm"
+#include "quorbusstation_data\code\_DEFINES\spans.dm"
+#include "quorbusstation_data\code\_DEFINES\keybinding.dm"
 // BEGIN_INCLUDE
 #include "__odlint.dm"
 #include "_maps\_basemap.dm"
@@ -7194,4 +7196,6 @@
 #include "quorbusstation_data\code\datums\wounds\slash.dm"
 #include "quorbusstation_data\code\datums\wounds\pierce.dm"
 #include "quorbusstation_data\code\datums\wounds\bones.dm"
+#include "quorbusstation_data\code\datums\keybinding\communication.dm"
+#include "quorbusstation_data\code\modules\client\verbs\looc.dm"
 // END QUORBUSSTATION INCLUDES
