@@ -12,5 +12,8 @@
 #define SFX_QSV_WOUND_BONESCRITICAL "bones_critical"
 
 #define SFX_QSV_EFFECTS_BLOODSPATTER "blood_spatter"
+#define SFX_QSV_EFFECTS_BULLETGENERIC "bullet_generic"
+#define SFX_QSV_EFFECTS_BULLETWALL "bullet_wall"
 
 #define SFX_QSV_ATTACK_KNIFESLICE "knife_slice"
+

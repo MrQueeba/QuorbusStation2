@@ -102,7 +102,7 @@
 		'quorbusstation_data/sound/qssounds/violence/woundage/bones_critical4.ogg',
 	)
 
-// Blood decal hitting the ground and making gross splat icky sounds... Ewwww
+// Effects - Blood decal hitting the ground and making gross splat icky sounds... Ewwww
 /datum/sound_effect/qs_violence/effects/blood_spatter
 	key = SFX_QSV_EFFECTS_BLOODSPATTER
 	file_paths = list(
@@ -112,6 +112,29 @@
 		'quorbusstation_data/sound/qssounds/violence/effects/blood_splatter4.ogg',
 		'quorbusstation_data/sound/qssounds/violence/effects/blood_splatter5.ogg',
 		'quorbusstation_data/sound/qssounds/violence/effects/blood_splatter6.ogg',
+	)
+// Effects - Bullet ricochet generic
+/datum/sound_effect/qs_violence/effects/bullet_generic
+	key = SFX_QSV_EFFECTS_BULLETGENERIC
+	file_paths = list(
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic1.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic2.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic3.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic4.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic5.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_generic6.ogg',
+	)
+
+// Effects - Bullet ricochet wall
+/datum/sound_effect/qs_violence/effects/bullet_wall
+	key = SFX_QSV_EFFECTS_BULLETWALL
+	file_paths = list(
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall1.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall2.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall3.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall4.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall5.ogg',
+		'quorbusstation_data/sound/qssounds/bullet/bullet_wall6.ogg',
 	)
 
 // Attack - Knife slice

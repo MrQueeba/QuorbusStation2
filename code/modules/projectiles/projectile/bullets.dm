@@ -4,7 +4,7 @@
 	damage = 60
 	damage_type = BRUTE
 	armor_flag = BULLET
-	hitsound_wall = SFX_RICOCHET
+	hitsound_wall = SFX_QSV_EFFECTS_BULLETWALL
 	sharpness = SHARP_POINTY
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	shrapnel_type = /obj/item/shrapnel/bullet
@@ -12,6 +12,7 @@
 	wound_bonus = 0
 	wound_falloff_tile = -5
 	embed_falloff_tile = -3
+	speed = 2.6
 
 /obj/projectile/bullet/smite
 	name = "divine retribution"
